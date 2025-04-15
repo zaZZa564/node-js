@@ -8,3 +8,11 @@ console.log(`Аргументы CLI: ${process.argv}`); // Массив аргу
 // Запускать через npm start или node App.js
 import { sum } from "./sum.js";
 console.log(sum(5, 10)); // 15
+
+// встроенные модули
+import fs from 'fs';
+// Асинхронная запись файла
+fs.writeFile('new.txt', 'Hello, Node.js!', (err) => {
+  if (err) throw err;
+  console.log('Файл создан!');
+});
