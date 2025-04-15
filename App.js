@@ -16,3 +16,13 @@ fs.writeFile('new.txt', 'Hello, Node.js!', (err) => {
   if (err) throw err;
   console.log('Файл создан!');
 });
+
+// создание сервера
+import http from 'http';
+const server = http.createServer((request, response) => {
+  response.writeHead(200, { 'content-type': 'text/html' });
+  res.end('<h1>Hello, World!</h1>');
+});
+server.listen(3000, () => {
+  console.log('Сервер запущен на http://localhost:3000');
+});
